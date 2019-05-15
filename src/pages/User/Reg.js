@@ -1,6 +1,6 @@
 
 //注册
-import styles from './Reg.less';
+import styles from './Reg.scss';
 
 export default function () {
   return (

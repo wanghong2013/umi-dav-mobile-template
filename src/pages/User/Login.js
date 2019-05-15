@@ -1,6 +1,6 @@
 
 //登录
-import styles from './Login.less';
+import styles from './Login.scss';
 
 export default function () {
   return (

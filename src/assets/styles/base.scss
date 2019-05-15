@@ -1,0 +1,5 @@
+$base-url: "http://assets.fnord.com";
+
+@function set-size($size) {
+  @return $size/20 * 1rem;
+}
