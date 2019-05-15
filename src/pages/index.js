@@ -1,18 +1,18 @@
-import styles from './index.css';
-
-export default function() {
-  console.log(123);
+import Link from 'umi/link';
+import { Button, Flex, } from "antd-mobile";
+const PlaceHolder = ({ className = '', ...restProps }) => (
+  <div className={`${className} placeholder`} {...restProps}>Block</div>
+);
+export default function () {
   return (
-    <div className={styles.normal}>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
-        <li>
-          <a href="https://umijs.org/guide/getting-started.html">
-            Getting Started
-          </a>
-        </li>
-      </ul>
+    <div className="g-wrapper">
+      <Link to="/users"></Link>
+      <Button>按钮3</Button>
+      <Flex>
+        <Flex.Item><PlaceHolder /></Flex.Item>
+        <Flex.Item><PlaceHolder /></Flex.Item>
+      </Flex>
     </div>
   );
 }
+

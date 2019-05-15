@@ -6,4 +6,7 @@ export const dva = {
       console.error(err.message);
     },
   },
+  plugins: [
+    require('dva-logger')(),
+  ],
 };

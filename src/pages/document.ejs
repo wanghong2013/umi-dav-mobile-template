@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>九鼎代理</title>
+    <link rel="shortcut icon " type="images/x-icon" href="./favicon.png" />
+    <script src="https://cdn.bootcss.com/js-polyfills/0.1.42/polyfill.min.js"></script>
+    <script>
+        function initViewPort(){
+            var scrWidth = document.documentElement.clientWidth;
+            var bl = scrWidth / 750;
+            var rem = bl * 40;
+            var docEl = document.documentElement;
+            var fontEl = document.createElement("style");
+            docEl.firstElementChild.appendChild(fontEl);
+            fontEl.innerHTML = "html{font-size:" + rem + "px!important;}";
+        }
+        initViewPort();
+
+        window.onresize = function(){
+            initViewPort()
+        }
+
+        function loadjs(url) {
+           var script=document.createElement("script"); 
+           script.setAttribute("type", "text/javascript"); 
+           script.setAttribute("src", url); 
+           document.documentElement.appendChild(script);
+        }
+
+        window.is_weixn = (function() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        })();
+
+        if (window.is_weixn) {
+            loadjs("http://res.wx.qq.com/open/js/jweixin-1.4.0.js");
+        }
+
+        loadjs("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js");
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

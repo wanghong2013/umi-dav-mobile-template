@@ -1,11 +1,12 @@
-import styles from './index.css';
-
+import { Fragment } from "react";
+import styles from './index.less';
 function BasicLayout(props) {
   return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      {props.children}
-    </div>
+    <Fragment>
+      <div className={styles["g-header"]}>头部</div>
+      <div className={styles["g-container"]}> {props.children}</div>
+      <div className={styles["g-footer"]}>底部</div>
+    </Fragment>
   );
 }
 
