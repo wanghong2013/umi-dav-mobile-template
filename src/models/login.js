@@ -3,7 +3,7 @@ export default {
     namespace: 'login',
 
     state: {
-        isLogin: false
+        isLogin: true
     },
 
     effects: {
