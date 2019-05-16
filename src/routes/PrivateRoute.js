@@ -5,7 +5,7 @@ export default class PrivateRoute extends Component {
         return (
             <div>
                 私有路由
-      </div>
+            </div>
         )
     }
 }

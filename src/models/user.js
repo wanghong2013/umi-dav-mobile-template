@@ -1,11 +1,14 @@
 
+
+const initialState = {
+    nickName: '王宏',
+    age: 34
+}
+
 export default {
     namespace: 'user',
 
-    state: {
-        nickName: '王宏',
-        age: 34
-    },
+    state: initialState,
 
     effects: {
 
