@@ -1,5 +1,21 @@
-$base-url: "http://assets.fnord.com";
+// cdn地址
+$base-url: "";
 
 @function set-size($size) {
   @return $size/20 * 1rem;
 }
+
+//color
+$blue: #2486ff;
+$white: #fff;
+$lightBlack: #858da1;
+$black: #465469;
+$red: #ff6060;
+
+//text
+$text12: set-size(12);
+$text14: set-size(14);
+$text16: set-size(16);
+
+//width
+$width: 1;
