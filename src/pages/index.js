@@ -1,18 +1,24 @@
-import Link from 'umi/link';
-import { Button, Flex, } from "antd-mobile";
-const PlaceHolder = ({ className = '', ...restProps }) => (
-  <div className={`${className} placeholder`} {...restProps}>Block</div>
-);
-export default function () {
-  return (
-    <div className="g-wrapper">
-      <Link to="/users"></Link>
-      <Button>按钮3</Button>
-      <Flex>
-        <Flex.Item><PlaceHolder /></Flex.Item>
-        <Flex.Item><PlaceHolder /></Flex.Item>
-      </Flex>
-    </div>
-  );
+import React, { Component } from "react";
+import { connect } from "dva";
+// import { connect } from "dva";
+@connect(({ login, user }) => ({
+  login,
+  user
+}))
+class Index extends Component {
+  render() {
+    console.log(this.props);
+    const { user: { nickName, age }, login: { isLogin }, dispatch } = this.props;
+    return (
+      <div className="g-wrapper">
+        <div>{age}</div>
+        <div>{nickName}</div>
+        <div>{isLogin}</div>
+        <button onClick={() => dispatch({ type: "user/saveAge", payload: 22 })}>修改年龄</button>
+      </div>
+    )
+  }
 }
+
+export default Index;
 

@@ -8,7 +8,7 @@ export default {
     services: path.resolve(__dirname, 'src/services'),
     models: path.resolve(__dirname, 'src/models'),
     // themes:path.resolve(__dirname,'src/themes'),
-    images: path.resolve(__dirname, 'src/assets')
+    img: path.resolve(__dirname, 'src/assets/img')
   },
   treeShaking: true,
   plugins: [
@@ -16,6 +16,7 @@ export default {
     ['umi-plugin-react', {
       antd: true,
       dva: {
+        hmr: true,
         immer: true
       },
       dynamicImport: false,

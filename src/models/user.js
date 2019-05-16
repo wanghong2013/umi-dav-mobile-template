@@ -3,8 +3,8 @@ export default {
     namespace: 'user',
 
     state: {
-        nickName: null,
-        imgUrl: null
+        nickName: '王宏',
+        age: 34
     },
 
     effects: {
@@ -12,7 +12,12 @@ export default {
     },
 
     reducers: {
-
+        saveAge(state, action) {
+            return {
+                ...state,
+                age: action.payload
+            }
+        }
     },
 
     subscriptions: {
